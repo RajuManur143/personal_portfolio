@@ -5,9 +5,5 @@
   "env": [
     "EMAIL_USER",
     "EMAIL_PASS"
-  ],
-  "envDescription": {
-    "EMAIL_USER": "Gmail address for sending contact form emails",
-    "EMAIL_PASS": "Gmail app password (not regular password)"
-  }
+  ]
 }
