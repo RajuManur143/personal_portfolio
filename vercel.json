@@ -2,8 +2,8 @@
   "version": 2,
   "buildCommand": "echo 'Build complete'",
   "public": false,
-  "env": [
-    "EMAIL_USER",
-    "EMAIL_PASS"
-  ]
+  "env": {
+    "EMAIL_USER": "@set-this-in-vercel-dashboard",
+    "EMAIL_PASS": "@set-this-in-vercel-dashboard"
+  }
 }
