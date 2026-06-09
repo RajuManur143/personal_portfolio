@@ -7,17 +7,116 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(180deg, #eef3fb 0%, #ffffff 100%);
+            color: #1b263b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: #001f3f !important;
+            box-shadow: 0 8px 20px rgba(0, 31, 63, 0.18);
+            margin-top: 2.5rem;
+            padding: 1.3rem 1rem !important;
+        }
+        .nav-link {
+            transition: all 0.25s ease;
+        }
+        .nav-link:hover {
+            color: #ffd966 !important;
+            transform: translateY(-2px);
+        }
+        .header-section {
+            padding: 3rem 1rem 1.5rem;
+            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+            color: white;
+            text-align: center;
+            animation: fadeInDown 0.8s ease both;
+        }
+        .header-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        .header-section p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            margin-bottom: 0;
+        }
+        .hero-banner {
+            padding: 2rem 1rem 0;
+            animation: fadeInDown 1s ease both;
+        }
+        .hero-carousel {
+            padding: 2.5rem 0 3rem;
+            animation: fadeInUp 1s ease both;
+        }
+        .section {
+            padding: 2rem 0;
+        }
+        .card.animate-card {
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 18px 45px rgba(0, 31, 63, 0.12);
+            animation: cardRise 1s ease both;
+        }
+        .card-body {
+            animation: fadeInUp 0.9s ease both;
+        }
+        .title {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #001f3f;
+        }
+        .btn-primary {
+            background-color: #001f3f;
+            border-color: #001f3f;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #003366;
+            border-color: #003366;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+        }
+        .hero-carousel img {
+            transform: scale(0.98);
+            animation: popIn 0.8s ease both;
+        }
+        .category {
+            color: #3f5a89;
+        }
+        .alert {
+            animation: slideInDown 0.5s ease both;
+        }
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes cardRise {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
     <title>Portfolio | RAJU  MANUR</title>
 </head>
 <body>
-    <!-- Header Image -->
-    <div class="text-center">
-        <h3>Welcome, Sir</h3>
-        
-    </div>
-
+    <!-- Header Section -->
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-sm bg-success navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #001f3f;">
         <a class="navbar-brand" href="#">
             
         </a>
@@ -30,6 +129,9 @@
                     <a class="nav-link text-white" href="#educational-info">Education</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="#project">Projects</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" href="#prof-skill">Professional Skills</a>
                 </li>
                 <li class="nav-item">
@@ -40,14 +142,14 @@
     </nav>
 
     <!-- Carousel Section -->
-    <div id="carouselExampleControls" class="carousel slide text-center carousel-dark" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide text-center carousel-dark hero-carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="rounded-circle shadow-1-strong mb-4" src="static/photo raju 1.2.1.1.png" alt="Profile" style="width: 150px;">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <h5 class="mb-3">RAJU  MANUR</h5>
-                        <p>Python - SDE full-stack developer</p>
+                        <p>Full Stack Developer</p>
                         <p class="text-muted">
                             <i class="fas fa-quote-left pe-2"></i>
                             Helping teams succeed by solving technical issues, supporting integrations, and making products easier to use.
@@ -61,24 +163,25 @@
     <!-- About Section -->
     <div class="section" id="about">
         <div class="container">
-            <div class="card">
+            <div class="card animate-card">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="card-body">
                             <div class="h4 mt-0 title">About</div>
-                            <p>Pursuing a B.E. in Computer Science, eager to leverage my experience in building responsive and scalable web applications. Skilled in full-stack software development with a passion for creating impactful solutions.</p>
+                            <p>Full Stack Java Developer specializing in Java, Spring Boot, React.js, REST APIs, MySQL, and cloud-based application development. Experienced in designing and building scalable web applications, developing secure backend services, creating responsive user interfaces, and integrating databases. Strong expertise in object-oriented programming, data structures, problem-solving, debugging, and delivering end-to-end software solutions.
+</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="card-body">
                             <div class="h4 mt-0 title">Basic Information</div>
                             <div class="row">
-                                <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                                <div class="col-sm-8">20 + </div>
+                                <div class="col-sm-4"><strong class="text-uppercase">Education:</strong></div>
+                                <div class="col-sm-8">B.E in computer Science </div>
                             </div>
                             <div class="row mt-3">
                                 <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                                <div class="col-sm-8">rajumanurcs036@gmail.com</div>
+                                <div class="col-sm-8">rajumanur343@gmail.com</div>
                             </div>
                             <div class="row mt-3">
                                 <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
@@ -90,7 +193,7 @@
                             </div>
                             <div class="row mt-3">
                                 <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                                <div class="col-sm-8">English, Kannada, Hindi(limited)</div>
+                                <div class="col-sm-8">English, Kannada, Hindi</div>
                             </div>
                         </div>
                     </div>
@@ -100,14 +203,17 @@
     </div>
 
     <!-- Education Section -->
-    <div class="section" id="skill">
+    <div class="section" id="education-section">
         <div class="container my-2">
             <div class="h4 text-center mb-4 title" id="educational-info">Education</div>
-            <div class="card">
+            <div class="card animate-card">
                 <div class="card-body">
-                    <div class="h5">Pursuing a B.E in Computer Science</div>
+                    <div class="h5">Bachelor of Engineering in Computer Science</div>
                     <p class="category">Visvesvaraya Technological University, Belgaum</p>
-                    <p>Completed a comprehensive program focusing on software development and system design.</p>
+                    <p>CGPA: 9.15/10</p>
+                   <p><strong>
+Relevant Coursework:</strong> Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, Software Engineering, Web Technologies, Machine Learning, Artificial Intelligence, and System Design.
+</p>
                     <p><b>Projects:</b></p>
                     
                         <p><b>1.Where is My Bus</b></p>
@@ -127,17 +233,51 @@
         </div>
     </div>
 
+    <!-- Projects Section -->
+    <div class="section" id="project">
+        <div class="container my-2">
+            <div class="h4 text-center mb-4 title">Projects</div>
+            <div class="card animate-card">
+                <div class="card-body">
+                    <div class="h5">Where is My Bus</div>
+                    <p class="category">Real-time bus tracking and route management system</p>
+                    <ul>
+                        <li>Built a real-time bus tracking system using GPS and Google Maps.</li>
+                        <li>Created REST APIs for route management and driver/student dashboards.</li>
+                        <li>Improved route visibility and reduced waiting times by 35%.</li>
+                    </ul>
+                    <div class="h5 mt-4">Employee Management System</div>
+                    <p class="category">Full-stack employee records and attendance application</p>
+                    <ul>
+                        <li>Managed 100+ employee records, attendance, leaves, and performance data.</li>
+                        <li>Implemented role-based authentication, CRUD operations, and dashboards.</li>
+                        <li>Improved data retrieval efficiency and team productivity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Professional Skills Section -->
     <div class="section" id="skill">
         <div class="container my-2">
             <div class="h4 text-center mb-4 title" id="prof-skill">Professional Skills</div>
-            <div class="card">
+            <div class="card animate-card">
                 <div class="card-body">
-                    <b>Programming Languages:</b> C, Python, Javascript<br><br>
-                    <b>Tools:</b> NumPy, Pandas, Matplotlib, MS Excel, OpenCV<br><br>
-                    <b>Database Management Systems:</b> MySQL, PostgreSQL, MongoDB, SQLite<br><br>
-                    <b>Internet Technologies:</b> Flask, HTML5, CSS
-                </div>
+    <b>Programming Languages:</b> Java, JavaScript, TypeScript, SQL<br><br>
+
+    <b>Frontend Technologies:</b> React.js, Next.js, HTML5, CSS3, Tailwind CSS, Bootstrap<br><br>
+
+    <b>Backend Technologies:</b> Spring Boot, Spring MVC, Spring Security, Hibernate, JPA, REST APIs, Microservices<br><br>
+
+    <b>Database Management Systems:</b> MySQL, PostgreSQL, MongoDB<br><br>
+
+    <b>Tools & Platforms:</b> Git, GitHub, Maven, Docker, Postman, VS Code, IntelliJ IDEA<br><br>
+
+    <b>Cloud & DevOps:</b> AWS, CI/CD, Vercel, Netlify<br><br>
+
+    <b>Core Concepts:</b> Data Structures & Algorithms, Object-Oriented Programming, Design Patterns, System Design
+</div>
             </div>
         </div>
     </div>
@@ -175,7 +315,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <button class="btn btn-primary" type="submit">Send</button>
-                                        <a class="btn btn-primary" href="{{ url_for('static', filename='Raju Manur Microsoft resume.pdf') }}" target="_blank">Download CV</a>
+                                        <a class="btn btn-primary" href="/static/Raju%20Manur%20Microsoft%20resume.pdf" target="_blank">Download CV</a>
                                     </div>
                                 </div>
                             </form>
@@ -188,7 +328,7 @@
                             <p class="mb-0"><strong>Phone</strong></p>
                             <p class="pb-2">+91 7975208123</p>
                             <p class="mb-0"><strong>Email</strong></p>
-                            <p>rajumanurcs036@gmail.com</p>
+                            <p>rajumanur343@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -198,5 +338,48 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- Form Feedback Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const success = params.get('success');
+            const error = params.get('error');
+            
+            if (success === 'true') {
+                showAlert('Thank you! Your message has been sent successfully.', 'success');
+                // Clean URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } else if (error) {
+                const errorMessages = {
+                    'missing_fields': 'Please fill in all required fields.',
+                    'invalid_email': 'Please enter a valid email address.',
+                    'send_failed': 'Failed to send email. Please try again later.',
+                    'config_error': 'Server configuration error. Please contact the administrator.',
+                    'server_error': 'A server error occurred. Please try again later.'
+                };
+                const message = errorMessages[error] || 'An error occurred. Please try again.';
+                showAlert(message, 'danger');
+                // Clean URL\n                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+            
+            function showAlert(message, type) {
+                const alertHTML = `
+                    <div class="alert alert-${type} alert-dismissible fade show container mt-3" role="alert">
+                        <strong>${type === 'success' ? '✓ Success!' : '✕ Error'}</strong> ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+                
+                const alertContainer = document.createElement('div');
+                alertContainer.innerHTML = alertHTML;
+                
+                const carousel = document.getElementById('carouselExampleControls');
+                if (carousel) {
+                    carousel.parentNode.insertBefore(alertContainer.firstChild, carousel.nextSibling);
+                }
+            }
+        });
+    </script>
 </body>
 </html>

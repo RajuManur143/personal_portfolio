@@ -1,0 +1,29 @@
+{
+  "name": "raju-manur-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website - Full Stack Developer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "full-stack",
+    "java",
+    "react"
+  ],
+  "author": "Raju Manur",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4",
+    "nodemailer": "^6.9.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": ">=9.0.0"
+  }
+}

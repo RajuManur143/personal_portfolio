@@ -1,0 +1,11 @@
+.git
+.gitignore
+README.md
+.env
+.env.local
+node_modules
+.venv
+venu
+.DS_Store
+*.log
+npm-debug.log*
